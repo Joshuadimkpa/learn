@@ -488,22 +488,600 @@
 // console.log(easy());
 
 // ===================================
-function averageCalculator(num1, num2, num3, num4) {
-  let average = (num1 + num2 + num3 + num4) / 4;
+// function averageCalculator(num1, num2, num3, num4) {
+//   let average = (num1 + num2 + num3 + num4) / 4;
 
-  return average;
-}
+//   return average;
+// }
 
-let outcome = averageCalculator(20, 30, 40, 50);
+// let outcome = averageCalculator(20, 30, 40, 50);
 
-console.log(outcome);
+// console.log(outcome);
 
-// Block Scope
-// fuction Scope
-// Global Scope
+// // Block Scope
+// // fuction Scope
+// // Global Scope
 
-if (10 > 3) {
-  let num1 = 30;
-  let num2 = 10;
-  console.log(num1);
-}
+// //block scope
+// if (10 > 3) {
+//   let num1 = 30;
+//   let num2 = 10;
+//   console.log(num1);
+// }
+
+//global scope
+
+// Data Types in JavaScript
+// Primitive Data Types
+// 1. Number
+// 2. String
+// 3. Boolean
+// 4. Undefined
+// 5. Null
+// 6. Symbol
+// 7. BigInt
+
+// Non-Primitive Data Types
+// 1. Object
+// 2. Array
+// 3. Function
+// 4. Date
+// 5. RegExp
+// 6. Map
+// 7. Set
+// 8. WeakMap
+// 9. WeakSet
+
+// let schoolName;
+// // console.log(schoolName); // undefined
+
+// let studentAge = null;
+// // console.log(studentAge); // null
+
+// // typeof operator
+// myVariable = 100;
+
+// Ternary Operator
+
+// let votingAge = 18;
+// let voterAge = 14;
+
+// if (voterAge >= votingAge) {
+//   console.log("You are eligible to vote");
+// } else {
+//   console.log("You are not eligible to vote");
+// }
+
+// voterAge >= votingAge
+//   ? console.log("You are eligible to vote")
+//   : console.log("You are not eligible to vote");
+
+// 10 > 5
+//   ? console.log("10 is greater than 5")
+//   : console.log("10 is not greater than 5");
+
+// let store = 20 > 12 ? "hot" : "cold";
+// console.log(store);
+
+// object distructuring
+// const car = {
+//   brand: "Hyundai",
+//   model: "Santafe",
+//   year: 2018,
+//   color: "Black",
+//   engineType: "GDI",
+//   mileage: 55000,
+// };
+
+// let model = car.model;
+// console.log(model);
+
+// const { engineType, mileage, model } = car;
+// console.log(engineType);
+
+// Alias in destructuring
+// const { engineType: et, mileage: ml } = car;
+
+// Methods in Object Literals
+
+// const car = {
+//   brand: "Hyundai",
+//   model: "Santafe",
+//   year: 2018,
+//   color: "Black",
+//   engineType: "GDI",
+//   mileage: 55000,
+//   roadWorthiness: function () {
+//     let value = 100000 - this.mileage;
+//     let roadW = value > 60000 ? "Not Roadworthy" : "Roadworthy";
+//     return roadW;
+//   },
+// };
+
+// let resuilt = car.roadWorthiness();
+// console.log(resuilt);
+
+// const user = {
+//   name: "Ada",
+//   age: 25,
+//   address: {
+//     city: "Lagos",
+//     street: "Yaba",
+//   },
+// };
+
+// const {
+//   age,
+//   address: { country },
+// } = user;
+// console.log(country);
+
+// const person = {
+//   name: "Anne",
+//   city: "Enugu",
+//   age: 23,
+//   adultHoodChecker: function () {
+//     let outcome = this.age > 18 ? "Adult" : "Minor";
+//     return outcome;
+//   },
+// };
+
+// person.adultHoodChecker();
+
+// console.log(person.adultHoodChecker());
+
+// Function Declaration method
+// Functions expression method
+// Arrow functions
+
+// Function Declaration
+// function addTwuNumbers() {
+//   let sum = a + b;
+//   return sum;
+// }
+
+// addTwuNumbers(10, 20);
+
+// Function Expression
+// const addTwoNumbers = function (a, b) {
+//   let sum = a + b;
+//   // return sum;
+//   console.log(sum);
+// };
+
+// addTwoNumbers(15, 25);
+
+// Arrow Function
+// const sayUserName = (userName) => {
+//   let said = `Your username is ${userName}`;
+//   console.log(said);
+// };
+
+// sayUserName("Joshua");
+
+// const sayUserName = (userName) => {
+//   return `Your username is ${userName}`;
+// };
+
+// console.log(sayUserName("Joshua"));
+
+// ======= ARRAYS ========
+
+// let names = "names";
+// let number = 485;
+
+// let literals = {
+//   color: "red",
+//   size: "medium",
+// };
+
+// const aiCompanies = ["ChatGPT", "Gemini", "Perplexity"];
+// // let result = aiCompanies[0];
+// // console.log(result);
+
+// // length property
+// let len = aiCompanies.length; // 3
+// console.log(len);
+
+const listOfUsers = [
+  {
+    name: "John Klep",
+    username: "johnklep",
+    email: "johnklep@example.com",
+  },
+
+  {
+    name: "Vivain Rohn",
+    username: "Vivr",
+    email: "vivain@example.com",
+  },
+
+  {
+    name: "chioma Agwu",
+    username: "chiomaagwu",
+    email: "chioma@example.com",
+  },
+];
+
+// lenght of array
+// let arrayLength = listOfUsers.length;
+// console.log(arrayLength);
+
+// arry methods
+// 1. push() method
+// 2. pop() method
+// 3. shift() method
+// 4. unshift() method
+// 5. indexOf() method
+// 6. includes() method
+// 7. splice() method
+// 8. slice() method
+// 9. join() method
+// 10. concat() method
+
+// 1. push() method
+// adds an element to the end of an array
+
+// listOfUsers.push({
+//   name: "Linda Ikeji",
+//   username: "lindaikeji",
+//   email: "lindaikeji@example.com",
+// });
+
+// 2. pop() method
+// removes the last element from an array
+
+// listOfUsers.pop();
+// console.log(listOfUsers);
+
+// 3.unshift() method
+// adds an element to the beginning of an array
+
+// listOfUsers.unshift({
+//   name: "Sarah Paul",
+//   username: "sarahpaul",
+//   email: "sarahpaul@example.com",
+// });
+
+// 4. shift() method
+// removes the first element from an array
+
+// listOfUsers.shift();
+// console.log(listOfUsers);
+
+// 5. indexOf() method
+// returns the index of the first occurrence of a specified value in an array
+
+// Array Method
+// slice
+
+// const arrayOfCountries = ["Namibia", "Germany", "Nigeria", "Ghana", "Botswana"];
+
+// let result = arrayOfCountries.slice(1, 4);
+// console.log(result);
+
+// CREATING FUNCTIONS
+// FUNCTION DECLARATION
+// function addTwoNumbers(a, b) {
+//   let sum = a + b;
+//   return sum;
+// }
+
+// addTwoNumbers();
+
+// FUNCTION EXPRESSION
+// const addTwoNumbersExp = function (a, b) {
+//   let sum = a + b;
+//   return sum;
+// };
+
+// addTwoNumbersExp();
+
+// ARROW FUNCTION
+/* ==================================== */
+// const addTwoNumbersArr = (a, b) => {
+//   let sum = a + b;
+//   return sum;
+// };
+
+// addTwoNumbersArr();
+
+// const sayUserName = (username) => {
+//   let said = `Your username is ${username}`;
+//   console.log(said);
+// };
+
+// sayUserName("Joshua");
+
+// LIST  DATA
+// =======================
+// ARRAYS
+// OBJECT LITERALS
+// FUNCTION
+// DATE
+// REGEXP
+// MAP
+// SET
+// WEAKMAP
+// WEAKSET
+
+// ARRAY LIST
+// const aiCompanies = ["ChatGPT", "Gemini", "Perplexity"];
+// // let result = aiCompanies[0];
+// // ====== ARRAY LENGTH ======
+// let len = aiCompanies.length; // 3
+// console.log(len);
+
+// ARRAY LITERALS
+
+// const CarA =  {
+//   carName: "Toyota",
+//   carModel: "Corolla",
+//   carChasis: "LE12345TYU",
+//   carColor: "Black",
+//   carYear: 2021,
+//   carVin: "TYU5678HGCRX",
+// }
+
+// const CarB =  {
+//   carName: "Ben",
+//   carModel: "GLE",
+//   carChasis: "GLE12345TYU",
+//   carColor: "Black",
+//   carYear: 2021,
+//   carVin: "GLE5678HGCRX",
+// }
+
+// const CarC =  {
+//   carName: "Ben",
+//   carModel: "GLE",
+//   carChasis: "GLE12345TYU",
+//   carColor: "Black",
+//   carYear: 2021,
+//   carVin: "GLE5678HGCRX",
+// }
+
+// const listOfAllCarsToFix = [
+// {
+//   carName: "Toyota",
+//   carModel: "Corolla",
+//   carChasis: "LE12345TYU",
+//   carColor: "Black",
+//   carYear: 2021,
+//   carVin: "TYU5678HGCRX",
+// },
+// {
+//   carName: "Ben",
+//   carModel: "GLE",
+//   carChasis: "GLE12345TYU",
+//   carColor: "Black",
+//   carYear: 2021,
+//   carVin: "GLE5678HGCRX",
+// },
+
+// {
+//   carName: "Ben",
+//   carModel: "GLE",
+//   carChasis: "GLE12345TYU",
+//   carColor: "Black",
+//   carYear: 2021,
+//   carVin: "GLE5678HGCRX",
+// }
+
+// ]
+
+// USER REOCRD LIST
+// const user1 = {
+//   name: "John Klep",
+//   username: "johnklep",
+//   email: "johnklep@example.com",
+// };
+
+// const user2 = {
+//   name: "Vivain Rohn",
+//   username: "Vivr",
+//   email: "vivain@example.com",
+// };
+
+// const user3 = {
+//   name: "chioma Agwu",
+//   username: "chiomaagwu",
+//   email: "chioma@example.com",
+// };
+
+// const listOfAllUsers = [
+//   {
+//     name: "John Klep",
+//     username: "johnklep",
+//     email: "johnklep@example.com",
+//   },
+
+//   {
+//     name: "Vivain Rohn",
+//     username: "Vivr",
+//     email: "vivain@example.com",
+//   },
+
+//   {
+//     name: "chioma Agwu",
+//     username: "chiomaagwu",
+//     email: "chioma@example.com",
+//   },
+// ];
+
+// const countries = ["Nigeria", "Ghana", "Kenya", "South Africa", "Egypt"];
+// let result = countries[2];
+// countries[2] = "uganda";
+// let result = countries;
+// console.log(result);
+
+// ARRAY METHODS
+// 1. push() method
+// 2. pop() method
+// 3. shift() method
+// 4. unshift() method
+// 5. indexOf() method
+// 6. includes() method
+// 7. splice() method
+// 8. slice() method
+// 9. join() method
+// 10. concat() method
+
+// 1. push() method
+// adds an element to the end of an array
+
+// const countries = ["Nigeria", "Ghana", "Kenya", "South Africa", "Egypt"];
+
+// countries.push("Uganda");
+// console.log(countries);
+
+// 2. pop() method
+// removes the last element from an array
+
+// countries.pop();
+
+// countries.unshift("Zambia");
+
+// countries.shift();
+
+// let result = countries.indexOf("Kenya");
+
+// let result = countries.includes("cameroon");
+// console.log(result);
+
+// // CONCAT METHOD
+// const boys = ["John", "Paul", "Mark"];
+// const girls = ["Anna", "Mary", "Jane"];
+// const allStudents = boys.concat(girls);
+// console.log(allStudents);
+
+// SLICE METHOD
+// const arrayOfCountries = ["Namibia", "Germany", "Nigeria", "Ghana", "Botswana"];
+
+// let result = arrayOfCountries.slice(1, 4);
+// console.log(result);
+
+// SPLICE METHOD
+// const arrayOfCountries = ["Namibia", "Germany", "Nigeria", "Ghana", "Botswana"];
+
+// let result = arrayOfCountries.splice(1, 2);
+// console.log(result);
+
+// coverting array to string using join method
+// let result = arrayOfCountries.join(" , ");
+// console.log(result);
+
+// reverse method
+// let result = arrayOfCountries.reverse();
+// console.log(result);
+
+// Looping through arrays
+// const arrayOfCountries = ["Namibia", "Germany", "Nigeria", "Ghana", "Botswana"];
+// for (let x = 0; x < 3; x++) {
+//   let result = arrayOfCountries[x];
+//   console.log(result);
+// }
+
+// FOR LOOP
+
+// const arrayOfCountries = ["Ghana", "Nigeria", "Kenya"];
+
+// for (let x = 0; x < 3; x++) {
+//   let result = arrayOfCountries[x];
+//   console.log(result);
+// }
+
+// const arrayOfNumbers = [1, 2, 3, 4, 5, 6];
+// const emptyArray = [];
+
+// for (let x = 0; x < 6; x++) {
+//   let result = arrayOfNumbers[x] * 3;
+//   emptyArray.push(result);
+// }
+
+// console.log(emptyArray);
+
+// const students = ["John", "Joel", "Joy", "Jane", "Joshua"];
+// for (let x = 0; x < 5; x++) {
+//   let result = students[x] + "JSS3";
+//   console.log(result);
+// }
+
+// const studentRecord = [
+//   {
+//     fullname: "Joy Paul",
+//     level: "Primary 6",
+//     regNo: 354858,
+//     averageScore: 77,
+//     age: 14,
+//   },
+
+//   {
+//     fullname: "John Joshua",
+//     level: "Primary 6",
+//     regNo: 234858,
+//     averageScore: 88,
+//     age: 13,
+//   },
+
+//   {
+//     fullname: "Eunice Eke",
+//     level: "Primary 6",
+//     regNo: 104858,
+//     averageScore: 98,
+//     age: 15,
+//   },
+// ];
+
+// for (let x = 0; x < 3; x++) {
+//   let result = studentRecord[x];
+//   console.log(result.regNo);
+// }
+
+// const carDetails = [
+//   {
+//     carName: "Toyota",
+//     carModel: "Corolla",
+//     carChasis: "LE12345TYU",
+//     carColor: "Black",
+//     carYear: 2021,
+//     carVin: "TYU5678HGCRX",
+//   },
+
+//   {
+//     carName: "Ben",
+//     carModel: "GLE",
+//     carChasis: "GLE12345TYU",
+//     carColor: "Black",
+//     carYear: 2021,
+//     carVin: "GLE5678HGCRX",
+//   },
+
+//   {
+//     carName: "Honda",
+//     carModel: "Civic",
+//     carChasis: "HC12345TYU",
+//     carColor: "White",
+//     carYear: 2020,
+//     carVin: "HC5678HGCRX",
+//   },
+// ];
+
+// for (let x = 0; x < 3; x++) {
+//   let result = carDetails[x];
+//   console.log(result.carChasis);
+// }
+
+// HIGHER ORDER ARRAY METHODS
+// forEach() method
+// map() method
+// filter() method
+// reduce() method
+// find() method
+// some() method
+// every() method
+
+// forEach() method
+carDetails.forEach((car) => {
+  console.log(car);
+});
