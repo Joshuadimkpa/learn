@@ -1082,6 +1082,65 @@ const listOfUsers = [
 // every() method
 
 // forEach() method
-carDetails.forEach((car) => {
-  console.log(car);
+// carDetails.forEach((car) => {
+//   console.log(car);
+// });
+
+// const arrayOfNames = ["mary", "john", "paul", "linda", "joshua"];
+
+// for(let x = 0; x < arrayOfNames.length; x++){
+
+// }
+
+const students = [
+  {
+    name: "James",
+    city: "Lagos",
+    score: 65,
+    hasPaid: true,
+  },
+
+  {
+    name: "Hassan",
+    city: "Abuja",
+    score: 75,
+    hasPaid: false,
+  },
+
+  {
+    name: "lydia",
+    city: "port Harcourt",
+    score: 95,
+    hasPaid: true,
+  },
+
+  {
+    name: "Chris",
+    city: "Kano",
+    score: 65,
+    hasPaid: false,
+  },
+
+  {
+    name: "Caleb",
+    city: "Enugu",
+    score: 85,
+    hasPaid: true,
+  },
+];
+
+// students.forEach(function (item) {
+//   let names = item.name;
+//   console.log(names);
+// });
+
+// 1) you dont need to tell for each method how many times to run on its own.
+// 2) each time it runs through an array it takes them one by one and perform an action on it.
+
+// FILTER METHOD
+
+const filteredData = students.filter(function (item) {
+  return item.score > 70;
 });
+
+console.log(filteredData);
