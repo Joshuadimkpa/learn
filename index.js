@@ -1092,42 +1092,42 @@ const listOfUsers = [
 
 // }
 
-const students = [
-  {
-    name: "James",
-    city: "Lagos",
-    score: 65,
-    hasPaid: true,
-  },
+// const students = [
+//   {
+//     name: "James",
+//     city: "Lagos",
+//     score: 65,
+//     hasPaid: true,
+//   },
 
-  {
-    name: "Hassan",
-    city: "Abuja",
-    score: 75,
-    hasPaid: false,
-  },
+//   {
+//     name: "Hassan",
+//     city: "Abuja",
+//     score: 75,
+//     hasPaid: false,
+//   },
 
-  {
-    name: "lydia",
-    city: "port Harcourt",
-    score: 95,
-    hasPaid: true,
-  },
+//   {
+//     name: "lydia",
+//     city: "port Harcourt",
+//     score: 95,
+//     hasPaid: true,
+//   },
 
-  {
-    name: "Chris",
-    city: "Kano",
-    score: 65,
-    hasPaid: false,
-  },
+//   {
+//     name: "Chris",
+//     city: "Kano",
+//     score: 65,
+//     hasPaid: false,
+//   },
 
-  {
-    name: "Caleb",
-    city: "Enugu",
-    score: 85,
-    hasPaid: true,
-  },
-];
+//   {
+//     name: "Caleb",
+//     city: "Enugu",
+//     score: 85,
+//     hasPaid: true,
+//   },
+// ];
 
 // students.forEach(function (item) {
 //   let names = item.name;
@@ -1139,8 +1139,64 @@ const students = [
 
 // FILTER METHOD
 
-const filteredData = students.filter(function (item) {
-  return item.score > 70;
-});
+// const filteredData = students.filter(function (item) {
+//   return item.score > 70;
+// });
 
-console.log(filteredData);
+// console.log(filteredData);
+
+/* Create a function that will collect an ice cream order that only contains 2 ice cream flavors. let the function print the order in the end */
+
+function iceCreamOrder(
+  customerName,
+  customerPhoneNo,
+  customerAddres,
+  ...flavors
+) {
+  const pricePerFlavor = 500; // price per flavor in Naira
+  // THE REST PARAMETER ALLOWS US TO COLLECT MULTIPLE ARGUMENTS INTO AN ARRAY
+  const numberOfFlavours = flavors.length;
+  const priceOfOrder = numberOfFlavours * pricePerFlavor;
+
+  let order = `New Order! Customer Name : ${customerName} Customer Phone Number : ${customerPhoneNo} Customer Address : ${customerAddres} And their flavors are ${flavors}. ORDER PRICE: N${priceOfOrder} `;
+
+  return order;
+}
+
+// First Customer Order
+console.log(iceCreamOrder("Anita", "08034567890", "No 8 Box Road", "Caramel"));
+
+// Second Customer Order
+console.log(
+  iceCreamOrder(
+    "Ben",
+    "08046567890",
+    "No 20 Box Road",
+    "coffee",
+    "vanilla",
+    " chocolate",
+    "strawberry"
+  )
+);
+
+function iceCreamSale(
+  customerName,
+  customerPhoneNo,
+  customerAddres,
+  toppings,
+  flavors
+) {
+  let orderStatment = `The customer with name ${customerName}, phone Number ${customerPhoneNo}, and address ${customerAddres} just placed an order. They need these flavors  ${flavors} and these toppings ${toppings}.`;
+
+  return orderStatment;
+}
+
+console.log(
+  iceCreamSale(
+    "Linda",
+    "08056789012",
+    "No 5 Box Road",
+    ["Almonda", "Gums", "Nuts"],
+    ["Coffee", "Cream"]
+  )
+);
