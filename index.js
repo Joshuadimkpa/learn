@@ -1147,56 +1147,260 @@ const listOfUsers = [
 
 /* Create a function that will collect an ice cream order that only contains 2 ice cream flavors. let the function print the order in the end */
 
-function iceCreamOrder(
-  customerName,
-  customerPhoneNo,
-  customerAddres,
-  ...flavors
-) {
-  const pricePerFlavor = 500; // price per flavor in Naira
-  // THE REST PARAMETER ALLOWS US TO COLLECT MULTIPLE ARGUMENTS INTO AN ARRAY
-  const numberOfFlavours = flavors.length;
-  const priceOfOrder = numberOfFlavours * pricePerFlavor;
+// function iceCreamOrder(
+//   customerName,
+//   customerPhoneNo,
+//   customerAddres,
+//   ...flavors
+// ) {
+//   const pricePerFlavor = 500; // price per flavor in Naira
+//   // THE REST PARAMETER ALLOWS US TO COLLECT MULTIPLE ARGUMENTS INTO AN ARRAY
+//   const numberOfFlavours = flavors.length;
+//   const priceOfOrder = numberOfFlavours * pricePerFlavor;
 
-  let order = `New Order! Customer Name : ${customerName} Customer Phone Number : ${customerPhoneNo} Customer Address : ${customerAddres} And their flavors are ${flavors}. ORDER PRICE: N${priceOfOrder} `;
+//   let order = `New Order! Customer Name : ${customerName} Customer Phone Number : ${customerPhoneNo} Customer Address : ${customerAddres} And their flavors are ${flavors}. ORDER PRICE: N${priceOfOrder} `;
 
-  return order;
-}
+//   return order;
+// }
 
-// First Customer Order
-console.log(iceCreamOrder("Anita", "08034567890", "No 8 Box Road", "Caramel"));
+// // First Customer Order
+// console.log(iceCreamOrder("Anita", "08034567890", "No 8 Box Road", "Caramel"));
 
-// Second Customer Order
-console.log(
-  iceCreamOrder(
-    "Ben",
-    "08046567890",
-    "No 20 Box Road",
-    "coffee",
-    "vanilla",
-    " chocolate",
-    "strawberry"
-  )
-);
+// // Second Customer Order
+// console.log(
+//   iceCreamOrder(
+//     "Ben",
+//     "08046567890",
+//     "No 20 Box Road",
+//     "coffee",
+//     "vanilla",
+//     " chocolate",
+//     "strawberry"
+//   )
+// );
 
-function iceCreamSale(
-  customerName,
-  customerPhoneNo,
-  customerAddres,
-  toppings,
-  flavors
-) {
-  let orderStatment = `The customer with name ${customerName}, phone Number ${customerPhoneNo}, and address ${customerAddres} just placed an order. They need these flavors  ${flavors} and these toppings ${toppings}.`;
+// function iceCreamSale(
+//   customerName,
+//   customerPhoneNo,
+//   customerAddres,
+//   toppings,
+//   flavors
+// ) {
+//   let orderStatment = `The customer with name ${customerName}, phone Number ${customerPhoneNo}, and address ${customerAddres} just placed an order. They need these flavors  ${flavors} and these toppings ${toppings}.`;
 
-  return orderStatment;
-}
+//   return orderStatment;
+// }
 
-console.log(
-  iceCreamSale(
-    "Linda",
-    "08056789012",
-    "No 5 Box Road",
-    ["Almonda", "Gums", "Nuts"],
-    ["Coffee", "Cream"]
-  )
-);
+// console.log(
+//   iceCreamSale(
+//     "Linda",
+//     "08056789012",
+//     "No 5 Box Road",
+//     ["Almonda", "Gums", "Nuts"],
+//     ["Coffee", "Cream"]
+//   )
+// );
+
+// const first = [1, 2, 3, 4, 5];
+// const second = [6, 7, 8, 9, 10];
+// const third = [11, 12, 13, 14, 15];
+
+// const newArray = [...first, ...second, ...third];
+
+// console.log(newArray);
+
+// const firstObject = {
+//   name: "Joshua",
+//   age: 32,
+// };
+
+// const secondObject = {
+//   name: "Mary",
+//   country: "kenya",
+//   age: 22,
+// };
+
+// const newObjectLiteral = {
+//   ...firstObject,
+//   ...secondObject,
+// };
+
+// console.log(newObjectLiteral);
+
+// SPPREAD OPERATOR IN FUNCTION CALLS
+
+// const patientRecords = [
+//   {
+//     patientName: "Louis",
+//     patientCountry: "Gambia",
+//     patientAge: 45,
+//     patientID: "PGH12345",
+//   },
+
+//   {
+//     patientName: "Sandra",
+//     patientCountry: "Kenya",
+//     patientAge: 29,
+//     patientID: "34H12345",
+//   },
+
+//   {
+//     patientName: "Andrew",
+//     patientCountry: "Ghana",
+//     patientAge: 23,
+//     patientID: "67h12345",
+//   },
+// ];
+
+// patientRecords.forEach(function (item) {
+//   let patientNames = item.patientName;
+//   console.log(patientNames);
+// });
+
+// filter method to get patients above 25 years
+// const collect = patientRecords.filter(function (item) {
+//   return item.patientAge > 25;
+// });
+
+// console.log(collect);
+
+// MAP METHOD
+// const scores = [40, 45, 89, 100];
+
+// const returnArray = scores.map(function (score) {
+//   return score + "%";
+// });
+
+// console.log(returnArray);
+
+// const products = [
+//   {
+//     name: "Laptop bag",
+//     price: 20000,
+//   },
+
+//   {
+//     name: "Wireless mouse",
+//     price: 10000,
+//   },
+
+//   {
+//     name: "Keyboard",
+//     price: 35000,
+//   },
+// ];
+
+// const result = products.map(function (item) {
+//   return item.name;
+// });
+
+// console.log(result);
+
+// Some METHOD: is used to check if at least one element in the array passes a test
+
+// const cartItems = [
+//   {
+//     name: "Mouse",
+//     inStock: true,
+//   },
+
+//   {
+//     name: "Keyboard",
+//     inStock: true,
+//   },
+
+//   {
+//     name: "Monitor",
+//     inStock: false,
+//   },
+// ];
+
+// const resuilt = cartItems.some(function (item) {
+//   return item.inStock === false;
+// });
+
+// console.log(resuilt);
+
+// SORT METHOD
+// const numbers = [23, 10, 4, 64, 98, 2, 6, 5];
+
+// const sorted = numbers.sort(function (a, b) {
+//   return a - b;
+// });
+
+// console.log(sorted);
+
+// REDUCE METHOD
+// IT IS USED TO REDUCE AN ARRAY TO A SINGLE VALUE BY EXECUTING A REDUCER FUNCTION ON EACH ELEMENT OF THE ARRAY
+
+// const numbers = [2, 2, 8];
+
+// const total = numbers.reduce(function (accumulator, currentValue) {
+//   return accumulator + currentValue;
+// }, 0);
+
+// EG
+// const cart = [
+//   {
+//     name: "Mouse",
+//     price: 8000,
+//   },
+
+//   {
+//     name: "Keyboard",
+//     price: 10000,
+//   },
+
+//   {
+//     name: "Monitor",
+//     price: 12000,
+//   },
+// ];
+
+// const totalPrice = cart.reduce(function (accumulator, currentValue) {
+//   return accumulator + currentValue.price;
+// }, 0);
+
+// console.log(totalPrice);
+
+// ============================
+
+const devstudents = [
+  {
+    name: "Grace",
+    score: 38,
+    total: 100,
+  },
+
+  {
+    name: "Kelechi",
+    score: 52,
+    total: 100,
+  },
+
+  {
+    name: "Micheal",
+    score: 88,
+    total: 100,
+  },
+
+  {
+    name: "Aisha",
+    score: 98,
+    total: 100,
+  },
+];
+
+// Add percentage symbol to score
+// Label them as pass or fail
+
+const transformedData = devstudents.map(function (student) {
+  let percentage = (student.score / student.total) * 100;
+  return {
+    studentName: student.name,
+    studentPercentage: `${percentage}%`,
+    status: percentage >= 50 ? "Pass" : "Fail",
+  };
+});
+
+console.log(transformedData);
